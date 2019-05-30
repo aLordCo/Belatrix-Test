@@ -6,6 +6,10 @@ This is a Test for Belatrix Company
 
 To start project please run:
 
+### `npm install`
+
+to install modules and then run
+
 ### `npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
