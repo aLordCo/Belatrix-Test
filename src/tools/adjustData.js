@@ -7,7 +7,7 @@ const fixedData = {
 function adjustData(data) {
     data.map(data => {
         data = data.split('/').map((data) => {
-                return data.trim();
+            return data.trim();
         });
         
         const entity = {};
@@ -18,8 +18,6 @@ function adjustData(data) {
         entity.nameProvince = data[1] !== '' ? data[1].match(/[^\s]+/g)[1] : '-';
         entity.codeDistrict = data[2] !== '' ? data[2].match(/\d+/g)[0] : '-';
         entity.nameDistrict = data[2] !== '' ? data[2].match(/\D+/g) : '-';
-
-        console.log(data[2].match(/\D+/g));
         
         if(data[2] !== '') {
             fixedData.districts[entity.codeDistrict] = entity;
@@ -34,9 +32,5 @@ function adjustData(data) {
 
     return fixedData;
 }
-
-// console.table(fixedData.departments, 'Departments');
-// console.table(fixedData.provinces);
-// console.table(fixedData.districts);
 
 export default adjustData;

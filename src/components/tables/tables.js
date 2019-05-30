@@ -42,8 +42,8 @@ function Tables(props) {
                     <tr>
                         <th>CODE</th>
                         <th>NAME</th>
-                        <th>CODE PARENT</th>
-                        <th>DESCRIPTION PARENT</th>
+                        <th>PARENT CODE</th>
+                        <th>PARENT DESCRIPTION</th>
                     </tr>
                 </thead>
                 <tbody className="table__content">
