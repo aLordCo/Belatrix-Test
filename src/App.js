@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+
+
+import Header from './components/header/header'
+import Home from './components/home/home'
+import Belatrix from './components/belatrix/belatrix';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/filter' component={Belatrix} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
